@@ -1,0 +1,1916 @@
+/* App Layout */
+.cricket-app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-pitch);
+}
+
+.main-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 16px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Card Base */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Header */
+.app-header {
+  background-color: #0d1a14;
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  font-size: 24px;
+}
+
+.brand-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--cricket-green);
+  text-transform: uppercase;
+}
+
+.brand-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+.status-setup {
+  background-color: #1e293b;
+  color: #94a3b8;
+}
+
+.status-live {
+  background-color: rgba(0, 230, 118, 0.15);
+  color: var(--cricket-green);
+  border: 1px solid rgba(0, 230, 118, 0.4);
+}
+
+.status-break {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.status-finished {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.cloud-sync-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background-color: #1a2a22;
+  border: 1px solid #233c30;
+}
+
+.sync-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.cloud-sync-badge.synced .sync-dot {
+  background-color: var(--cricket-green);
+  box-shadow: 0 0 6px var(--cricket-green);
+}
+
+.cloud-sync-badge.offline .sync-dot {
+  background-color: #f59e0b;
+}
+
+.btn-reset-match {
+  background-color: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-reset-match:hover {
+  background-color: #dc2626;
+  color: #fff;
+}
+
+/* Collapsed Setup Bar */
+.setup-collapsed-bar {
+  background-color: #12201a;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.setup-collapsed-info strong {
+  color: var(--text-main);
+}
+
+.btn-toggle-setup {
+  background-color: #1a2f26;
+  color: var(--cricket-green);
+  border: 1px solid #274538;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.btn-toggle-setup:hover {
+  background-color: #233d31;
+}
+
+/* Match Setup Form */
+
+
+.setup-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.setup-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--cricket-green);
+}
+
+.setup-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.btn-quick-fill {
+  background-color: rgba(0, 230, 118, 0.1);
+  border: 1px solid rgba(0, 230, 118, 0.35);
+  color: var(--cricket-green);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.btn-quick-fill:hover {
+  background-color: var(--cricket-green);
+  color: #0c1512;
+}
+
+.alert-error {
+  background-color: rgba(239, 68, 68, 0.15);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.form-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.form-input,
+.form-select {
+  background-color: #0d1713;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 0.88rem;
+  color: var(--text-main);
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: var(--cricket-green);
+}
+
+.toss-summary-banner {
+  background-color: #162a21;
+  border: 1px dashed #2a4c3c;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #d1fae5;
+  margin: 12px 0;
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.team-players-column {
+  background-color: #0e1914;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.column-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.bat-tag {
+  font-size: 0.68rem;
+  background-color: rgba(0, 230, 118, 0.2);
+  color: var(--cricket-green);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.players-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.player-input-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.player-number {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  width: 18px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.player-input {
+  padding: 6px 8px;
+  font-size: 0.82rem;
+}
+
+.opening-section {
+  background-color: #0f1c16;
+  border: 1px solid #233b30;
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--cricket-green);
+  margin-bottom: 12px;
+}
+
+.setup-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-start-match {
+  background-color: var(--cricket-green);
+  color: #07130d;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 12px 24px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 14px var(--cricket-green-glow);
+  transition: transform 0.15s, background-color 0.2s;
+  width: 100%;
+}
+
+.btn-start-match:hover {
+  background-color: #00ff84;
+  transform: translateY(-1px);
+}
+
+/* Scoreboard Card */
+.scoreboard-card {
+  background: linear-gradient(180deg, #13241c 0%, #0e1914 100%);
+  border: 1px solid #223f31;
+  padding: 18px;
+}
+
+.scoreboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 10px;
+}
+
+.teams-matchup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.batting-team-badge {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.batting-label {
+  font-size: 0.72rem;
+  color: var(--cricket-green);
+  font-weight: 600;
+}
+
+.vs-divider {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.bowling-team-name {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.innings-indicator {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #1a2f24;
+  color: #a7f3d0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #2b4f3e;
+}
+
+/* Main Score Display */
+.main-score-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 10px 0 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.score-numbers {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  line-height: 1;
+}
+
+.runs-count {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -1px;
+}
+
+.score-slash {
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--cricket-green);
+  padding: 0 4px;
+}
+
+.wickets-count {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--cricket-green);
+}
+
+.score-subtext {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  display: block;
+  margin-top: 4px;
+}
+
+.overs-block {
+  text-align: right;
+}
+
+.overs-text {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.max-overs {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.rate-badge {
+  font-size: 0.8rem;
+  color: #38bdf8;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* 2nd Innings Target Banner */
+.target-banner {
+  background-color: #1a3327;
+  border: 1px solid #2d5843;
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.target-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.target-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.target-value {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fbbf24;
+}
+
+.target-status {
+  font-size: 0.85rem;
+  color: #f1f5f9;
+}
+
+.target-status strong {
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.target-achieved {
+  color: var(--cricket-green);
+  font-weight: 800;
+}
+
+/* Live Actors Grid */
+.live-actors-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.actors-card {
+  background-color: #0b1611;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.actors-card-title {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.mini-stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.mini-stats-table th {
+  color: var(--text-dim);
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-align: right;
+  padding: 4px 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mini-stats-table th.th-name {
+  text-align: left;
+}
+
+.mini-stats-table td {
+  padding: 6px 6px;
+  text-align: right;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  color: #e2e8f0;
+}
+
+.batter-name-cell,
+.bowler-name-cell {
+  text-align: left !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.active-striker-row {
+  background-color: rgba(0, 230, 118, 0.07);
+}
+
+.active-striker-row td {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.strike-dot {
+  font-size: 0.85rem;
+}
+
+.idle-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--text-dim);
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 2px;
+}
+
+.striker-badge {
+  font-size: 0.65rem;
+  background-color: var(--cricket-green);
+  color: #07150f;
+  font-weight: 800;
+  padding: 1px 4px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.stat-highlight {
+  color: var(--cricket-green) !important;
+  font-weight: 800;
+}
+
+.wickets-cell {
+  color: #f87171 !important;
+}
+
+.sr-cell {
+  color: var(--text-dim);
+  font-size: 0.78rem;
+}
+
+.ball-icon {
+  font-size: 0.85rem;
+}
+
+.extras-compact-strip {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.extras-breakdown {
+  color: var(--text-dim);
+}
+
+/* Scoring Controls Card */
+.scoring-controls-card {
+  background-color: #12201a;
+  border: 1px solid #233c30;
+}
+
+.controls-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.controls-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.over-alert-badge {
+  background-color: rgba(245, 158, 11, 0.2);
+  border: 1px solid #f59e0b;
+  color: #fbbf24;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Runs Scoring Grid: Large touch friendly buttons */
+.scoring-grid-runs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.btn-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 68px;
+  border-radius: 10px;
+  font-weight: 800;
+  transition: all 0.15s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  user-select: none;
+}
+
+.btn-score:active {
+  transform: scale(0.96);
+}
+
+.btn-score:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-score-num {
+  font-size: 1.65rem;
+  line-height: 1.1;
+}
+
+.btn-score-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.85;
+}
+
+.btn-score-dot {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  border: 1px solid #334155;
+}
+.btn-score-dot:hover:not(:disabled) {
+  background-color: #334155;
+}
+
+.btn-score-run {
+  background-color: #14532d;
+  color: #86efac;
+  border: 1px solid #16a34a;
+}
+.btn-score-run:hover:not(:disabled) {
+  background-color: #166534;
+}
+
+.btn-score-four {
+  background-color: #1e3a8a;
+  color: #93c5fd;
+  border: 1px solid #2563eb;
+}
+.btn-score-four:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.btn-score-six {
+  background-color: #581c87;
+  color: #d8b4fe;
+  border: 1px solid #7e22ce;
+}
+.btn-score-six:hover:not(:disabled) {
+  background-color: #6b21a8;
+}
+
+/* Extras & Wicket Grid */
+.scoring-grid-extras {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 1.5fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.btn-extra {
+  height: 48px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.btn-extra:active {
+  transform: scale(0.96);
+}
+
+.btn-extra:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-wide,
+.btn-noball {
+  background-color: #451a03;
+  color: #fcd34d;
+  border: 1px solid #b45309;
+}
+.btn-wide:hover:not(:disabled),
+.btn-noball:hover:not(:disabled) {
+  background-color: #78350f;
+}
+
+.btn-bye,
+.btn-legbye {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  border: 1px solid #475569;
+}
+.btn-bye:hover:not(:disabled),
+.btn-legbye:hover:not(:disabled) {
+  background-color: #334155;
+}
+
+.btn-wicket {
+  background-color: #7f1d1d;
+  color: #fca5a5;
+  border: 1px solid #dc2626;
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+}
+.btn-wicket:hover:not(:disabled) {
+  background-color: #991b1b;
+  color: #fff;
+}
+
+/* Match Actions Toolbar */
+.match-actions-bar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-action {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 8px 6px;
+  border-radius: 6px;
+  background-color: #172a21;
+  border: 1px solid #264738;
+  color: var(--text-muted);
+  text-align: center;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-action:hover:not(:disabled) {
+  background-color: #1e382c;
+  color: #ffffff;
+}
+
+.btn-action:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.btn-undo {
+  color: #38bdf8;
+  border-color: #0369a1;
+}
+
+.btn-end-innings {
+  color: #fbbf24;
+  border-color: #b45309;
+}
+
+.btn-finish-match {
+  color: #f87171;
+  border-color: #b91c1c;
+}
+
+/* Over History Card */
+.over-history-card {
+  background-color: #12201a;
+  border: 1px solid var(--border-color);
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.history-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.btn-undo-mini {
+  background-color: rgba(56, 189, 248, 0.15);
+  border: 1px solid #0284c7;
+  color: #38bdf8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.btn-undo-mini:hover {
+  background-color: #0284c7;
+  color: #ffffff;
+}
+
+.current-over-box {
+  background-color: #0a1410;
+  border: 1px solid #233c30;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.over-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.over-number-tag {
+  color: var(--cricket-green);
+  font-weight: 700;
+}
+
+.over-bowler-tag strong,
+.over-runs-tag strong {
+  color: var(--text-main);
+}
+
+.balls-sequence,
+.completed-balls-sequence {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.empty-over-text {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* Ball Chips */
+.ball-chip {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s ease;
+  user-select: none;
+}
+
+.ball-chip:hover {
+  transform: scale(1.1);
+}
+
+.ball-dot {
+  background-color: #334155;
+  color: #94a3b8;
+  border: 1px solid #475569;
+}
+
+.ball-run {
+  background-color: #15803d;
+  color: #ffffff;
+  border: 1px solid #22c55e;
+}
+
+.ball-four {
+  background-color: #1d4ed8;
+  color: #ffffff;
+  border: 1px solid #3b82f6;
+}
+
+.ball-six {
+  background-color: #7e22ce;
+  color: #ffffff;
+  border: 1px solid #a855f7;
+}
+
+.ball-extra {
+  background-color: #b45309;
+  color: #fef3c7;
+  border: 1px solid #f59e0b;
+}
+
+.ball-wicket {
+  background-color: #b91c1c;
+  color: #fee2e2;
+  border: 1px solid #ef4444;
+}
+
+/* Completed Overs List */
+.previous-overs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.no-previous-overs {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  font-style: italic;
+  padding: 4px 0;
+}
+
+.completed-over-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background-color: #0b1611;
+  border: 1px solid #1c3227;
+  border-radius: 6px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.completed-over-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+}
+
+.completed-over-num {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.completed-over-bowler {
+  color: var(--text-muted);
+}
+
+.completed-over-total {
+  color: var(--cricket-green);
+  font-weight: 600;
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 999;
+}
+
+.modal-container {
+  background-color: #12201a;
+  border: 1px solid #233c30;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header-danger {
+  background-color: rgba(220, 38, 38, 0.15);
+  border-bottom-color: rgba(220, 38, 38, 0.3);
+}
+
+.modal-header-success {
+  background-color: rgba(0, 230, 118, 0.1);
+  border-bottom-color: rgba(0, 230, 118, 0.3);
+}
+
+.modal-header-trophy {
+  background: linear-gradient(90deg, #1e3a2f 0%, #172d24 100%);
+  border-bottom-color: #2b5240;
+}
+
+.modal-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.btn-modal-close {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  padding: 4px;
+}
+.btn-modal-close:hover {
+  color: #ffffff;
+}
+
+.modal-body {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-footer {
+  padding: 12px 18px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-modal-secondary {
+  background-color: #1f2937;
+  color: #cbd5e1;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.btn-modal-secondary:hover {
+  background-color: #374151;
+}
+
+.btn-modal-primary {
+  background-color: var(--cricket-green);
+  color: #07150f;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+.btn-modal-primary:hover {
+  background-color: #00ff84;
+}
+
+.btn-modal-danger {
+  background-color: #dc2626;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+.btn-modal-danger:hover {
+  background-color: #ef4444;
+}
+
+/* Wicket Modal Specifics */
+.dismissal-options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.btn-dismissal-choice {
+  background-color: #0b1611;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 10px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.15s ease;
+}
+
+.btn-dismissal-choice.active {
+  background-color: rgba(220, 38, 38, 0.2);
+  border-color: #ef4444;
+  color: #fca5a5;
+  font-weight: 800;
+}
+
+.highlighted-field-group {
+  background-color: #0b1611;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.radio-pill-group {
+  display: flex;
+  gap: 8px;
+}
+
+.radio-pill {
+  flex: 1;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: var(--text-muted);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.radio-pill.active {
+  background-color: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+.alert-all-out-warning {
+  background-color: rgba(245, 158, 11, 0.15);
+  border: 1px solid #f59e0b;
+  color: #fde68a;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+}
+
+/* Bowler Modal Specifics */
+.bowlers-pick-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.bowler-option-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background-color: #0a1410;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.bowler-option-card:hover:not(.disabled-card) {
+  border-color: var(--cricket-green);
+  background-color: #0f2019;
+}
+
+.bowler-option-card.selected {
+  border-color: var(--cricket-green);
+  background-color: rgba(0, 230, 118, 0.1);
+}
+
+.bowler-option-card.disabled-card {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.badge-consecutive {
+  font-size: 0.65rem;
+  background-color: #7f1d1d;
+  color: #fca5a5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
+.badge-current {
+  font-size: 0.65rem;
+  background-color: #0284c7;
+  color: #e0f2fe;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
+.bowler-stats-chip {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+/* Extras Modal Specifics */
+.extra-type-toggle-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.btn-extra-toggle {
+  background-color: #0b1611;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 8px 4px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.btn-extra-toggle.active {
+  background-color: rgba(245, 158, 11, 0.2);
+  border-color: #f59e0b;
+  color: #fef3c7;
+}
+
+.extra-details-panel {
+  background-color: #0b1611;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.extra-info-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.runs-pill-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.run-pill {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.run-pill.active {
+  background-color: var(--cricket-green);
+  border-color: var(--cricket-green);
+  color: #07150f;
+  font-weight: 800;
+}
+
+.calc-summary-badge {
+  background-color: #172a20;
+  border: 1px solid #284737;
+  color: #a7f3d0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-top: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-main);
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+/* Delivery Inspector Modal */
+.inspect-chip-hero {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.inspect-hero-runs {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.inspect-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.inspect-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.inspect-label {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+
+.inspect-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.inspect-wicket-box {
+  background-color: rgba(220, 38, 38, 0.15);
+  border: 1px solid #dc2626;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  color: #fca5a5;
+}
+
+.inspect-commentary-box {
+  background-color: #0b1611;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* Innings Break & Match Summary Modals */
+.innings-summary-card {
+  background-color: #0b1611;
+  border: 1px solid #223f31;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+}
+
+.summary-team-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.summary-score-large {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--cricket-green);
+  line-height: 1.2;
+}
+
+.summary-overs {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-left: 6px;
+  font-weight: 500;
+}
+
+.summary-runrate {
+  font-size: 0.82rem;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.target-announcement {
+  background-color: #172f23;
+  border: 1px solid #2a5840;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  color: #d1fae5;
+}
+
+.target-announcement strong {
+  color: #ffffff;
+}
+
+.sub-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--cricket-green);
+  margin: 12px 0 8px;
+}
+
+.winner-banner-box {
+  text-align: center;
+  padding: 16px;
+  background: linear-gradient(180deg, #183325 0%, #0d1b14 100%);
+  border: 1px solid #27523c;
+  border-radius: 8px;
+}
+
+.trophy-emoji {
+  font-size: 2.8rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.winner-title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.winner-margin-badge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  background-color: var(--cricket-green);
+  color: #07150f;
+  padding: 3px 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.scorecard-tabs {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
+}
+
+.scorecard-tab-btn {
+  padding: 6px 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  border-radius: 6px;
+}
+
+.scorecard-tab-btn.active {
+  background-color: #1a2f24;
+  color: var(--cricket-green);
+  border: 1px solid #2b503d;
+}
+
+.scorecard-innings-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.innings-scorecard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.innings-scorecard-header h4 {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.extras-badge {
+  font-size: 0.75rem;
+  background-color: #1e293b;
+  color: #cbd5e1;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.table-section-title {
+  font-size: 0.82rem;
+  color: var(--cricket-green);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.scorecard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.scorecard-table th {
+  text-align: left;
+  color: var(--text-dim);
+  font-weight: 600;
+  padding: 6px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.scorecard-table td {
+  padding: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: #f1f5f9;
+}
+
+.score-bold {
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.dismissal-cell {
+  font-size: 0.75rem;
+}
+
+.out-text {
+  color: var(--text-muted);
+}
+
+.not-out-text {
+  color: var(--cricket-green);
+  font-weight: 700;
+}
+
+/* Confirm Dialog */
+.confirm-message {
+  font-size: 0.95rem;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+/* Responsive Rules */
+@media (max-width: 640px) {
+  .app-header {
+    padding: 10px 14px;
+  }
+
+  .main-container {
+    padding: 10px 10px 30px;
+    gap: 10px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .runs-count {
+    font-size: 2.8rem;
+  }
+
+  .overs-text {
+    font-size: 1.6rem;
+  }
+
+  .form-grid-2,
+  .form-grid-3,
+  .form-grid-4,
+  .players-grid,
+  .live-actors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scoring-grid-runs {
+    gap: 6px;
+  }
+
+  .btn-score {
+    height: 58px;
+  }
+
+  .btn-score-num {
+    font-size: 1.4rem;
+  }
+
+  .btn-score-label {
+    font-size: 0.6rem;
+  }
+
+  .scoring-grid-extras {
+    grid-template-columns: repeat(2, 1fr) 1fr;
+  }
+
+  .btn-wicket {
+    grid-column: span 3;
+    height: 44px;
+  }
+
+  .match-actions-bar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .btn-finish-match {
+    grid-column: span 2;
+  }
+}
+
+/* Cohesive scorer dashboard polish */
+.cricket-app-layout {
+  background:
+    radial-gradient(ellipse at 50% -24rem, rgba(38, 108, 65, 0.2), transparent 55%),
+    var(--bg-pitch);
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  min-height: 68px;
+  padding: 12px max(20px, calc((100vw - 1080px) / 2));
+  background: rgba(11, 25, 17, 0.94);
+  border-bottom: 1px solid #263e30;
+  backdrop-filter: blur(14px);
+}
+
+.header-brand { gap: 11px; }
+.brand-title {
+  color: #e8f5eb;
+  font-size: 1rem;
+  letter-spacing: 0.045em;
+}
+.brand-title::before {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin: 0 9px 1px 0;
+  border-radius: 50%;
+  background: #70dc94;
+  box-shadow: 0 0 14px rgba(112, 220, 148, 0.55);
+}
+.brand-divider { color: #486052; }
+.brand-subtitle { color: #91a798; }
+.main-container {
+  max-width: 1080px;
+  padding: 24px 22px 56px;
+  gap: 18px;
+}
+.card {
+  border: 1px solid #263b2f;
+  border-radius: 16px;
+  padding: 20px;
+  background: linear-gradient(145deg, rgba(20, 36, 27, 0.98), rgba(15, 28, 21, 0.98));
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.17);
+}
+.match-setup-card { border-top: 2px solid #55bd78; }
+.setup-title { color: #eaf6ed; font-size: 1.35rem; letter-spacing: -0.025em; }
+.setup-subtitle { color: #94a99a; margin-top: 2px; }
+.form-label { color: #afc1b3; font-size: 0.76rem; letter-spacing: 0.015em; }
+.form-input,
+.form-select {
+  min-height: 42px;
+  color: #eef6f0;
+  background: #0b1710;
+  border: 1px solid #304638;
+  border-radius: 9px;
+  padding: 9px 12px;
+}
+.form-input::placeholder { color: #65796b; }
+.form-input:focus,
+.form-select:focus { border-color: #64c984; box-shadow: 0 0 0 3px rgba(100, 201, 132, 0.12); }
+.team-players-column,
+.actors-card,
+.current-over-box {
+  background: rgba(8, 20, 13, 0.65);
+  border-color: #2a4032;
+  border-radius: 12px;
+}
+.team-players-column { padding: 14px; }
+.column-title { color: #e3eee6; }
+.player-input-row { gap: 9px; }
+.player-number { color: #789080; min-width: 22px; }
+.player-input { min-height: 36px; }
+.toss-summary-banner {
+  background: rgba(36, 91, 55, 0.2);
+  border: 1px solid #315b3e;
+  color: #c7e8d0;
+  border-radius: 10px;
+}
+.opening-section {
+  padding: 16px;
+  border: 1px solid #2a4032;
+  border-radius: 12px;
+  background: rgba(8, 20, 13, 0.42);
+}
+.section-title { color: #dcebe0; margin-bottom: 12px; }
+.btn-start-match {
+  min-height: 46px;
+  border-radius: 10px;
+  background: #42b96b;
+  color: #07140b;
+  box-shadow: 0 7px 18px rgba(37, 160, 81, 0.2);
+}
+.btn-start-match:hover { background: #59cc7f; }
+.setup-collapsed-bar {
+  border-color: #2b4434;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: #112119;
+}
+.btn-toggle-setup,
+.btn-quick-fill {
+  border-radius: 8px;
+  padding: 7px 11px;
+  background: rgba(57, 139, 82, 0.14);
+  border-color: #356448;
+}
+.scoreboard-card {
+  position: relative;
+  overflow: hidden;
+  padding: 22px 24px;
+  background:
+    radial-gradient(ellipse at 90% 0, rgba(61, 149, 89, 0.17), transparent 42%),
+    linear-gradient(135deg, #14271c 0%, #0d1a12 100%);
+  border: 1px solid #31513d;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
+}
+.scoreboard-header { border-bottom-color: rgba(190, 226, 199, 0.12); padding-bottom: 13px; }
+.batting-team-badge { font-size: 1.05rem; }
+.innings-indicator { border-radius: 999px; padding: 5px 11px; }
+.main-score-row { padding: 12px 0 20px; }
+.runs-count { font-size: clamp(3.5rem, 7vw, 4.5rem); letter-spacing: -0.065em; }
+.wickets-count { color: #8adba2; }
+.score-subtext { color: #819787; }
+.overs-text { letter-spacing: -0.04em; }
+.rate-badge { color: #86d9e8; }
+.target-banner { border-radius: 11px; background: rgba(39, 85, 55, 0.48); border-color: #3f704e; }
+.actors-card { padding: 14px; }
+.actors-card-title { color: #9cb3a2; letter-spacing: 0.08em; }
+.mini-stats-table th { color: #809586; }
+.mini-stats-table td { color: #d2dfd5; }
+.player-name { color: inherit; overflow: hidden; text-overflow: ellipsis; }
+.scoring-controls-card,
+.over-history-card {
+  background: linear-gradient(145deg, #132219, #101d16);
+  border-color: #2a4233;
+}
+.controls-title,
+.history-title { color: #e7f1e9; font-size: 1rem; }
+.scoring-grid-runs { gap: 10px; }
+.btn-score {
+  height: 74px;
+  border-radius: 12px;
+  box-shadow: none;
+  border-width: 1px;
+}
+.btn-score:hover:not(:disabled) { transform: translateY(-2px); filter: brightness(1.12); }
+.btn-score-run { background: #153d27; border-color: #2d7548; color: #b7f2c7; }
+.btn-score-dot { background: #1b2921; border-color: #394b3f; }
+.btn-score-four { background: #183653; border-color: #326b9b; color: #b9defd; }
+.btn-score-six { background: #3a2451; border-color: #71469a; color: #e3c8ff; }
+.scoring-grid-extras { gap: 9px; }
+.btn-extra { border-radius: 10px; min-height: 46px; }
+.btn-action { border-radius: 8px; padding: 9px 6px; }
+.btn-action-finish { color: #fca5a5; border-color: #8a3939; }
+.history-header { margin-bottom: 14px; }
+.current-over-box { padding: 14px; }
+.ball-chip { width: 38px; height: 38px; box-shadow: none; }
+.completed-over-row { background: rgba(8, 20, 13, 0.55); border-color: #263c2e; border-radius: 9px; }
+.modal-container { border-radius: 16px; box-shadow: 0 24px 70px rgba(0, 0, 0, 0.48); }
+
+@media (max-width: 700px) {
+  .app-header { padding: 10px 14px; min-height: 60px; }
+  .brand-title { font-size: 0.88rem; }
+  .header-actions { gap: 6px; }
+  .main-container { padding: 14px 12px 34px; gap: 12px; }
+  .card { padding: 15px; border-radius: 13px; }
+  .scoreboard-card { padding: 17px 15px; }
+  .main-score-row { align-items: flex-end; }
+  .overs-block { text-align: left; }
+  .overs-text { font-size: 1.65rem; }
+  .score-subtext { font-size: 0.68rem; }
+  .live-actors-grid { grid-template-columns: minmax(0, 1fr); }
+  .mini-stats-table { font-size: 0.76rem; }
+  .mini-stats-table th, .mini-stats-table td { padding: 6px 4px; }
+  .scoring-grid-runs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .scoring-grid-extras { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .btn-wicket { grid-column: span 2; }
+  .match-actions-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .btn-action-finish { grid-column: span 2; }
+  .setup-card-header { align-items: flex-start; }
+  .btn-quick-fill { white-space: nowrap; }
+  .opening-section { padding: 12px; }
+}
+
+@media (max-width: 390px) {
+  .brand-subtitle, .brand-divider { display: none; }
+  .cloud-sync-badge { font-size: 0.65rem; }
+  .status-badge { font-size: 0.65rem; }
+  .btn-reset-match { padding: 5px 7px; }
+  .scoreboard-header { align-items: flex-start; }
+  .batting-team-badge { font-size: 0.92rem; }
+  .target-banner { justify-content: flex-start; }
+  .target-status { order: 3; width: 100%; }
+}
+
